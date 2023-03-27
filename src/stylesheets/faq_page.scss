@@ -1,0 +1,130 @@
+.faqPage {
+  width: 100%;
+  padding: 140px 40px 0 40px;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+
+  .question {
+    grid-column: 3 / 21;
+    margin-bottom: 40px;
+    transition: 0.5s ease-in-out;
+    border-bottom: 1px solid #c4c4c4;
+    padding-bottom: 24px;
+
+    h2 {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 44px;
+
+      &#question {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &::after {
+          content: "";
+          width: 24px;
+          height: 24px;
+          display: block;
+          background-image: url("../images/chevron.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          transform: rotate(-180deg);
+          transition: 0.2s ease-in-out;
+        }
+      }
+
+      &#answer {
+        font-size: 24px;
+        line-height: 32px;
+        padding-left: 40px;
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+        white-space: pre-line;
+
+        &.visible {
+          margin-top: 30px;
+          height: auto;
+          transition: 0.5s ease-in-out;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 20px;
+          height: 2px;
+          background-color: black;
+          margin-left: -40px;
+          margin-right: 20px;
+          top: 14px;
+        }
+      }
+    }
+
+    &.open {
+      margin-bottom: 40px;
+
+      h2#question {
+        &::after {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .faqPage {
+    display: block;
+    padding: 0 20px;
+    margin-top: 60px;
+
+    .question {
+      margin-bottom: 24px;
+
+      &.open {
+        margin-bottom: 24px;
+      }
+
+      h2 {
+        font-size: 24px;
+        line-height: 32px;
+
+        &#question {
+          &::after {
+            background-size: 16px 16px;
+            margin-left: 10px;
+          }
+        }
+
+        &#answer {
+          font-size: 16px;
+          line-height: 24px;
+          padding-left: 0;
+
+          &::before {
+            position: static;
+            margin-left: 0;
+            display: inline-block;
+            width: 16px;
+            margin-bottom: 6px;
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .faqPage {
+    .question {
+      grid-column: 2 / 22;
+    }
+  }
+}

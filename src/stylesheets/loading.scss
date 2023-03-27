@@ -1,0 +1,28 @@
+.loading {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // .loader {
+  //   width: 32px;
+  //   height: 32px;
+  //   background-image: url("../images/loader.svg");
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  // }
+
+  // .logo {
+  //
+  // }
+
+  h2 {
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 500;
+  }
+}

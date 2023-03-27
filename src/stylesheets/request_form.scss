@@ -1,0 +1,183 @@
+.requestForm {
+  grid-column: 3/ 23;
+
+  .form-elements {
+    position: relative;
+  }
+
+  input {
+    width: 383px;
+    height: 52px;
+    border-radius: 52px;
+    border: 1px solid black;
+    background-color: white;
+    padding: 0 30px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+
+    width: 210px;
+    height: 52px;
+    border-radius: 52px;
+    // background-color: #f50000;
+    background-color: black;
+    text-align: center;
+
+    font-size: 18px;
+    line-height: 52px;
+    font-weight: 800;
+    color: white;
+
+    margin-left: 20px;
+
+    &.disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    &.animated {
+      animation-name: move;
+      animation-duration: 0.3s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-out;
+
+      @keyframes move {
+        0% {
+          margin-left: 20px;
+        }
+        50% {
+          margin-left: 28px;
+        }
+        100% {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    &.loadingBtn {
+      color: #f50000;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        background-image: url("../images/loader.svg");
+
+        animation-name: spin;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+  }
+
+  .inputNotice {
+    position: absolute;
+    top: 80px;
+    max-width: 500px;
+    padding-left: 8px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #686868;
+  }
+
+  .soldoutNotice {
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    max-width: 614px;
+    padding: 28px 40px 28px 30px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    background-color: white;
+    border-radius: 26px;
+    border: 1px solid #ff0000;
+    box-shadow: 0px 3px 4px 2px rgba(0, 0, 0, 0.2);
+
+    animation: 1s ease-in-out 1s forwards appearSold;
+  }
+
+  @keyframes appearSold {
+    0% {
+      left: -100%;
+    }
+
+    100% {
+      left: 0;
+    }
+  }
+
+  .thankyou_message {
+    h2 {
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 785px) {
+  .requestForm {
+    input {
+      width: 370px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .requestForm {
+    margin-top: 40px;
+    grid-column: 1/2;
+
+    input {
+      width: 100%;
+      padding: 0 20px;
+      font-size: 16px;
+    }
+
+    .inputNotice {
+      position: static;
+      width: 100%;
+      margin-top: 32px;
+    }
+
+    .soldoutNotice {
+      position: static;
+      margin-top: 20px;
+    }
+
+    button {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 16px;
+
+      &.animated {
+        animation-name: none;
+      }
+    }
+  }
+}
