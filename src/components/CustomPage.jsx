@@ -12,7 +12,7 @@ export default function CustomPage(props) {
     <div className="сustomPage">
       <h2>
         Здесь все про нестандартные решения: форма, материал, детали и упаковка
-        — всем этим займемся мы.
+        — всем этим займемся мы. Описание изменено.
       </h2>
       <h2>
         Ты только придумываешь и утверждаешь.
@@ -41,8 +41,10 @@ export default function CustomPage(props) {
               <div className="column">
                 <h2>в одиночку</h2>
                 <ul>
+                  <li>изменено</li>
                   <li>придумать идею</li>
                   <li>сделать макет</li>
+                  <li>изменено</li>
                   <li>определиться с будущим фасоном вещи</li>
                   <li>найти конструктора </li>
                   <li>нормального конструктора</li>
@@ -74,6 +76,7 @@ export default function CustomPage(props) {
                 <div className="logo" />
                 <ul>
                   <li>придумать идею</li>
+                  <li>изменено</li>
                   <li>написать в «делай вещи»</li>
                 </ul>
               </div>
