@@ -324,6 +324,7 @@
 
       .contact {
         display: flex;
+        flex-wrap: wrap;
 
         a {
           display: flex;
@@ -354,6 +355,13 @@
             &::before {
               background-image: url("../images/insta-icon-black.svg");
               margin-top: 2px;
+            }
+          }
+
+          &.vk {
+            &::before {
+              background-image: url("../images/iconmonstr-vk-1.svg");
+              margin-top: 4px;
             }
           }
         }
