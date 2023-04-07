@@ -184,6 +184,13 @@ function Menubar(props) {
           >
             instagram
           </a>
+          <a
+            href="https://vk.com/delai.market"
+            target="_blank"
+            className="vk"
+          >
+            vk
+          </a>
           {showNotice ? (
             <p className="notice">
               Пиши нам в любой из мессенджеров, если остались вопросы
@@ -278,6 +285,13 @@ function Menubar(props) {
                     className="instagram"
                   >
                     instagram
+                  </a>
+                  <a
+                    href="https://vk.com/delai.market"
+                    target="_blank"
+                    className="vk"
+                  >
+                    vk
                   </a>
                 </div>
 

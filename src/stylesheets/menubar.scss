@@ -120,7 +120,7 @@
   }
 
   .contact {
-    grid-column: 20 / 25;
+    grid-column: 18 / 25;
     display: flex;
 
     a {
@@ -134,7 +134,7 @@
         color: black;
       }
 
-      &:first-of-type {
+      &:nth-child(n+0):not(:last-child) {
         margin-right: 24px;
       }
 
@@ -159,6 +159,13 @@
         &::before {
           background-image: url("../images/insta-icon-black.svg");
           margin-top: 2px;
+        }
+      }
+
+      &.vk {
+        &::before {
+          background-image: url("../images/iconmonstr-vk-1.svg");
+          margin-top: 4px;
         }
       }
     }
@@ -317,6 +324,7 @@
 
       .contact {
         display: flex;
+        flex-wrap: wrap;
 
         a {
           display: flex;
@@ -347,6 +355,13 @@
             &::before {
               background-image: url("../images/insta-icon-black.svg");
               margin-top: 2px;
+            }
+          }
+
+          &.vk {
+            &::before {
+              background-image: url("../images/iconmonstr-vk-1.svg");
+              margin-top: 4px;
             }
           }
         }
