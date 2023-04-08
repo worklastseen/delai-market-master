@@ -10,7 +10,7 @@ function MainPage(props) {
       </h1>
       <div className="cards">
         <a
-          href="http://delai.shop/blanki"
+          href="https://shop.delai.market"
           target="_blank"
           className="card"
           onClick={props.handlePathnameChange}
