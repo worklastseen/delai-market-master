@@ -144,7 +144,7 @@ function Menubar(props) {
         </Link>
         <div className="main-links">
           <a
-            href="http://delai.shop/blanki"
+            href="https://shop.delai.market"
             target="_blank"
             className={currentSection == "бланки" ? "current" : ""}
             ref={blanksRef}
@@ -243,7 +243,7 @@ function Menubar(props) {
                 <div className="circle" style={{ left: circlePosition }} />
                 <div className="main-links">
                   <a
-                    href="http://delai.shop/blanki"
+                    href="https://shop.delai.market"
                     target="_blank"
                     className={currentSection == "бланки" ? "current" : ""}
                     ref={blanksRef}
