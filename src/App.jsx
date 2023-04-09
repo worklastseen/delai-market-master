@@ -149,7 +149,7 @@ function App(props) {
         handlePathnameChange={handlePathnameChange}
       />
       <Switch>
-        <Route path="/бланки/:blankName">
+        {/* <Route path="/бланки/:blankName">
           <BlanksPage
             blanks={props.blanks}
             printings={props.printings}
@@ -184,7 +184,7 @@ function App(props) {
             selectedBlanksNames={selectedBlanksNames}
             showNotice={showNotice}
           />
-        </Route>
+        </Route> */}
         <Route path="/пошив">
           <CustomPage overload={props.overloads[0]} />
         </Route>
