@@ -16,20 +16,20 @@ function MainPage(props) {
           onClick={props.handlePathnameChange}
         >
           <div className="image blanks" />
-          <h2>Бланки</h2>
+          <h2 style={{ textTransform: "uppercase" }}>Бланки</h2>
           <p className="caption">
-            Уже ждут твое нанесение:
+            Уже готовая одежда:
             <br />
             бери и печатай
           </p>
         </a>
         <Link to="/пошив" className="card" onClick={props.handlePathnameChange}>
           <div className="image custom" />
-          <h2>Пошив</h2>
+          <h2 style={{ textTransform: "uppercase" }}>Пошив</h2>
           <p className="caption">
-            Уникальное решение для
+            Когда нужно сделать
             <br />
-            уникальной идеи
+            с нуля
           </p>
         </Link>
       </div>

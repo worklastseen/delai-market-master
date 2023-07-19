@@ -309,7 +309,7 @@ function BlanksPage(props) {
       <figure className="no-blanks" />
       <h2>
         Не нашел нужную модель? <br />
-         Тогда тебе точно в{" "}
+        Тогда тебе точно в{" "}
         <Link to="/пошив" onClick={props.handlePathnameChange}>
           индивидуальный пошив
         </Link>
