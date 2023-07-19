@@ -290,6 +290,7 @@ function Menubar(props) {
                     href="https://vk.com/delai.market"
                     target="_blank"
                     className="vk"
+                    style={{ marginTop: "15px" }}
                   >
                     vk
                   </a>
