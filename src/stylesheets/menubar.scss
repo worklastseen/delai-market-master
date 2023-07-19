@@ -99,8 +99,9 @@
   }
 
   .main-links {
-    grid-column: 11 / 15;
+    grid-column: 10 / 16;
     display: flex;
+    justify-self: center;
 
     a {
       color: black;
@@ -122,6 +123,8 @@
   .contact {
     grid-column: 18 / 25;
     display: flex;
+    justify-self: end;
+    margin-right: 53px;
 
     a {
       display: flex;
