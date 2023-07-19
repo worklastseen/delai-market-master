@@ -172,24 +172,27 @@ function Menubar(props) {
         <div className="contact">
           <a
             href="https://t.me/delai_tg"
+            rel="noreferrer"
             target="_blank"
             className="telegram"
           >
             tg
           </a>
           <a
-            href="https://www.instagram.com/delai.market/"
-            target="_blank"
-            className="instagram"
-          >
-            ig
-          </a>
-          <a
             href="https://vk.com/delai.market"
+            rel="noreferrer"
             target="_blank"
             className="vk"
           >
             vk
+          </a>
+          <a
+            href="https://www.instagram.com/delai.market/"
+            rel="noreferrer"
+            target="_blank"
+            className="instagram"
+          >
+            ig
           </a>
           {showNotice ? (
             <p className="notice">
@@ -244,8 +247,9 @@ function Menubar(props) {
                 <div className="main-links">
                   <a
                     href="https://shop.delai.market"
+                    rel="noreferrer"
                     target="_blank"
-                    className={currentSection == "бланки" ? "current" : ""}
+                    className={currentSection === "бланки" ? "current" : ""}
                     ref={blanksRef}
                     onClick={handleMobileLinkClick}
                   >
@@ -253,7 +257,7 @@ function Menubar(props) {
                   </a>
                   <Link
                     to="/пошив"
-                    className={currentSection == "пошив" ? "current" : ""}
+                    className={currentSection === "пошив" ? "current" : ""}
                     ref={customRef}
                     onClick={handleMobileLinkClick}
                   >
@@ -261,7 +265,7 @@ function Menubar(props) {
                   </Link>
                   <Link
                     to="/FAQ"
-                    className={currentSection == "FAQ" ? "current" : ""}
+                    className={currentSection === "FAQ" ? "current" : ""}
                     ref={faqRef}
                     onClick={handleMobileLinkClick}
                   >
@@ -274,25 +278,28 @@ function Menubar(props) {
                 <div className="contact">
                   <a
                     href="https://teleg.run/delai_tg"
+                    rel="noreferrer"
                     target="_blank"
                     className="telegram"
                   >
                     tg
                   </a>
                   <a
-                    href="https://www.instagram.com/delai.market/"
-                    target="_blank"
-                    className="instagram"
-                  >
-                    ig
-                  </a>
-                  <a
                     href="https://vk.com/delai.market"
+                    rel="noreferrer"
                     target="_blank"
                     className="vk"
                     // style={{ marginTop: "15px" }}
                   >
                     vk
+                  </a>
+                  <a
+                    href="https://www.instagram.com/delai.market/"
+                    rel="noreferrer"
+                    target="_blank"
+                    className="instagram"
+                  >
+                    ig
                   </a>
                 </div>
 
