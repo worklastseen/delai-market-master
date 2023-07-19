@@ -16,7 +16,7 @@ function MainPage(props) {
           onClick={props.handlePathnameChange}
         >
           <div className="image blanks" />
-          <h2 style={{ textTransform: "uppercase" }}>Бланки</h2>
+          <h2>Бланки</h2>
           <p className="caption">
             Уже готовая одежда:
             <br />
@@ -25,7 +25,7 @@ function MainPage(props) {
         </a>
         <Link to="/пошив" className="card" onClick={props.handlePathnameChange}>
           <div className="image custom" />
-          <h2 style={{ textTransform: "uppercase" }}>Пошив</h2>
+          <h2>Пошив</h2>
           <p className="caption">
             Когда нужно сделать
             <br />

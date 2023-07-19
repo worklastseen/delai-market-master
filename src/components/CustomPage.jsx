@@ -18,7 +18,7 @@ export default function CustomPage(props) {
         <br />
         Напиши нам в{" "}
         <a target="_blank" href="https://teleg.run/delai_tg">
-          телеграм
+          telegram
         </a>{" "}
         или на{" "}
         <a target="_blank" href="mailto: hello@delai.market">

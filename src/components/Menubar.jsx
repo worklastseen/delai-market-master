@@ -175,14 +175,14 @@ function Menubar(props) {
             target="_blank"
             className="telegram"
           >
-            telegram
+            tg
           </a>
           <a
             href="https://www.instagram.com/delai.market/"
             target="_blank"
             className="instagram"
           >
-            instagram
+            ig
           </a>
           <a
             href="https://vk.com/delai.market"
@@ -277,20 +277,20 @@ function Menubar(props) {
                     target="_blank"
                     className="telegram"
                   >
-                    телеграм
+                    tg
                   </a>
                   <a
                     href="https://www.instagram.com/delai.market/"
                     target="_blank"
                     className="instagram"
                   >
-                    instagram
+                    ig
                   </a>
                   <a
                     href="https://vk.com/delai.market"
                     target="_blank"
                     className="vk"
-                    style={{ marginTop: "15px" }}
+                    // style={{ marginTop: "15px" }}
                   >
                     vk
                   </a>
