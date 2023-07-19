@@ -462,7 +462,7 @@ export default function BlankPopup(props) {
                 <p className="minAmount">Заказ от 1 шт.</p>
               )}
               <p className="notice">
-                Мы поможем тебе выбрать размеры  и количество при работе над
+                Мы поможем тебе выбрать размеры и количество при работе над
                 партией
               </p>
             </div>
