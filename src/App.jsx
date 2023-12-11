@@ -5,13 +5,11 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   useParams
 } from "react-router-dom";
 
 import Menubar from "./components/Menubar.jsx";
 import MainPage from "./components/MainPage.jsx";
-import BlanksPage from "./components/BlanksPage.jsx";
 import CustomPage from "./components/CustomPage.jsx";
 import AboutUsPage from "./components/AboutUsPage.jsx";
 import FaqPage from "./components/FaqPage.jsx";
