@@ -1,0 +1,348 @@
+.aboutUsPage {
+  width: 100%;
+  padding: 140px 40px 0 40px;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-column-gap: 20px;
+
+  h2 {
+    grid-column: 3 / 19;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    margin-top: 120px;
+    grid-column: 3 / 19;
+    font-weight: 700;
+    font-size: 36px;
+    color: #686868;
+    line-height: 44px;
+    margin-bottom: 30px;
+
+    span {
+      color: #f50000;
+      display: block;
+    }
+  }
+
+  h3 {
+    grid-column: 3 / 16;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 30px;
+  }
+
+  &__logos {
+    grid-column: 3 / 24;
+    display: flex;
+    align-items: center;
+
+    .logo {
+      margin-right: 80px;
+      display: block;
+    }
+
+    .logo.sber {
+      width: 163px;
+      height: 68px;
+      background: url("../images/sberLogo.svg") no-repeat center;
+      position: relative;
+      top: 11px;
+    }
+
+    .logo.yandex {
+      width: 61px;
+      height: 62px;
+      background: url("../images/yandexLogo.svg") no-repeat center;
+    }
+
+    .logo.vk {
+      width: 59px;
+      height: 60px;
+      background: url("../images/vkLogo.svg") no-repeat center;
+    }
+
+    .logo.avito {
+      width: 128px;
+      height: 40px;
+      background: url("../images/avitoLogo.svg") no-repeat center;
+    }
+
+    .logo.yota {
+      width: 53px;
+      height: 112px;
+      background: url("../images/yotaLogo.svg") no-repeat center;
+    }
+
+    .logo.okko {
+      width: 120px;
+      height: 44px;
+      background: url("../images/okkoLogo.svg") no-repeat center;
+    }
+  }
+
+  &__images {
+    grid-column: 3 / 24;
+    display: flex;
+    align-items: center;
+
+    .img {
+      margin-right: 100px;
+      display: block;
+      border-radius: 26px;
+      min-width: 368px;
+      height: 368px;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .img.photo1 {
+      background: url("../images/m-3.jpeg") no-repeat center center;
+      background-size: 100%;
+    }
+
+    .img.photo2 {
+      background: url("../images/m-4.jpeg") no-repeat center 80%;
+      background-size: 100%;
+    }
+
+    .img.photo3 {
+      background: url("../images/m-2.jpeg") no-repeat center center;
+      background-size: 100%;
+    }
+
+    .img.photo4 {
+      background: url("../images/a-1.jpeg") no-repeat center 43%;
+      background-size: 116%;
+    }
+
+    .img.photo5 {
+      background: url("../images/a-3.jpeg") no-repeat center center;
+      background-size: 100%;
+    }
+
+    .img.photo6 {
+      background: url("../images/a-2.jpeg") no-repeat center 65%;
+      background-size: 100%;
+    }
+
+    .img.photo7 {
+      background: url("../images/to-2.jpg") no-repeat center center;
+      background-size: 100%;
+    }
+
+    .img.photo8 {
+      background: url("../images/to-3.jpg") no-repeat center center;
+      background-size: 100%;
+    }
+
+    .img.photo9 {
+      background: url("../images/to-4.jpg") no-repeat center center;
+      background-size: 100%;
+    }
+
+    .img:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1600px) {
+  .aboutUsPage {
+
+    .img {
+      margin-right: 50px;
+      min-width: 328px;
+      height: 328px;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .aboutUsPage {
+
+    &__logos .logo {
+      margin-right: 50px;
+    }
+
+    .img {
+      margin-right: 40px;
+      min-width: 280px;
+      height: 280px;
+    }
+
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .aboutUsPage {
+
+    h2 {
+      grid-column: 3/22;
+    }
+
+    h3 {
+      grid-column: 3/20;
+    }
+
+    .img {
+      margin-right: 20px;
+      min-width: 240px;
+      height: 240px;
+    }
+
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .aboutUsPage {
+
+    &__images,
+    &__logos,
+    h1,
+    h3,
+    h2 {
+      grid-column-start: 2;
+    }
+
+    h2,
+    h3 {
+      grid-column: 2/24;
+    }
+
+    h1 {
+      margin-top: 80px;
+    }
+
+    &__images {
+      display: block;
+    }
+
+    .img:last-of-type,
+    .img {
+      max-width: 328px;
+      height: 328px;
+      margin: 0 auto 80px;
+    }
+
+    &__logos {
+      display: block;
+      text-align: center;
+      width: 540px;
+      margin: auto;
+    }
+
+    &__logos .logo {
+      margin: 30px;
+      display: inline-block;
+      min-width: 170px;
+    }
+
+    &__logos .logo.sber {
+      position: relative;
+      top: -15px;
+    }
+
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutUsPage {
+    display: block;
+    padding: 0 20px;
+    margin-top: 60px;
+
+    &__logos {
+      width: 350px;
+      display: block;
+    }
+
+    &__logos .logo {
+      margin: 30px 14px;
+      min-width: 140px;
+    }
+
+    h3 {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    h1 {
+      font-size: 26px;
+      line-height: 32px;
+    }
+
+    &__logos .logo.sber {
+      width: 131px;
+      height: 53px;
+      background-size: contain;
+    }
+
+    &__logos .logo.yandex {
+      width: 49px;
+      height: 49px;
+      background-size: contain;
+    }
+
+    &__logos .logo.vk {
+      width: 48px;
+      height: 48px;
+      background-size: contain;
+    }
+
+    &__logos .logo.avito {
+      width: 103px;
+      height: 32px;
+      background-size: contain;
+    }
+
+    &__logos .logo.yota {
+      width: 41px;
+      height: 90px;
+      background-size: contain;
+    }
+
+    &__logos .logo.okko {
+      width: 96px;
+      height: 34px;
+      background-size: contain;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .aboutUsPage {
+
+    .img:last-of-type,
+    .img {
+      min-width: 240px;
+      max-width: 240px;
+      height: 240px;
+      margin: 0 auto 30px;
+    }
+
+    h1 {
+      margin-top: 50px;
+    }
+
+    &__logos {
+      width: 280px;
+    }
+
+    &__logos .logo {
+      margin: 30px 0;
+      min-width: 132px;
+    }
+
+  }
+}

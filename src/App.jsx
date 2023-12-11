@@ -13,6 +13,7 @@ import Menubar from "./components/Menubar.jsx";
 import MainPage from "./components/MainPage.jsx";
 import BlanksPage from "./components/BlanksPage.jsx";
 import CustomPage from "./components/CustomPage.jsx";
+import AboutUsPage from "./components/AboutUsPage.jsx";
 import FaqPage from "./components/FaqPage.jsx";
 import Footer from "./components/Footer.jsx";
 import BlankPopup from "./components/BlankPopup.jsx";
@@ -187,6 +188,9 @@ function App(props) {
         </Route> */}
         <Route path="/пошив">
           <CustomPage overload={props.overloads[0]} />
+        </Route>
+        <Route path="/о_нас">
+          <AboutUsPage />
         </Route>
         <Route path="/FAQ">
           <FaqPage questions={props.questions} />

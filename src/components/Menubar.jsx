@@ -5,6 +5,7 @@ function Menubar(props) {
   const logoRef = useRef(null);
   const blanksRef = useRef(null);
   const customRef = useRef(null);
+  const aboutRef = useRef(null);
   const faqRef = useRef(null);
   const [circlePosition, setCirclePosition] = useState(0);
   const [showNotice, setShowNotice] = useState(false);
@@ -14,19 +15,19 @@ function Menubar(props) {
   const [menubarMobileOpen, setMenubarMobileOpen] = useState(false);
 
   useEffect(() => {
-    window.innerWidth >= 814 ? setMobileMenu(false) : setMobileMenu(true);
+    window.innerWidth >= 992 ? setMobileMenu(false) : setMobileMenu(true);
 
     let pathname = props.pathname;
     handleSetCirclePosition(pathname);
 
     window.addEventListener("resize", function() {
-      window.innerWidth >= 814 ? setMobileMenu(false) : setMobileMenu(true);
+      window.innerWidth >= 992 ? setMobileMenu(false) : setMobileMenu(true);
       handleSetCirclePosition(pathname);
     });
   });
 
   function handleSetCirclePosition(pathname) {
-    if (window.innerWidth >= 814) {
+    if (window.innerWidth >= 992) {
       if (
         pathname == "/" ||
         pathname.includes("/пользовательское_соглашение")
@@ -54,6 +55,13 @@ function Menubar(props) {
         let circlePosition = width / 2 + offsetX - 4.5;
         setCirclePosition(circlePosition);
         setCurrentSection("пошив");
+      } else if (pathname.includes("/о_нас")) {
+        let offsetX = aboutRef.current.offsetLeft;
+        let width = aboutRef.current.offsetWidth;
+
+        let circlePosition = width / 2 + offsetX - 4.5;
+        setCirclePosition(circlePosition);
+        setCurrentSection("о_нас");
       } else if (pathname.includes("/FAQ")) {
         let offsetX = faqRef.current.offsetLeft;
         let width = faqRef.current.offsetWidth;
@@ -81,6 +89,13 @@ function Menubar(props) {
         let circlePosition = width / 2 + offsetX - 4.5;
         setCirclePosition(circlePosition);
         setCurrentSection("пошив");
+      } else if (pathname.includes("/о_нас") && menubarMobileOpen) {
+        let offsetX = aboutRef.current.offsetLeft;
+        let width = aboutRef.current.offsetWidth;
+
+        let circlePosition = width / 2 + offsetX - 4.5;
+        setCirclePosition(circlePosition);
+        setCurrentSection("о_нас");
       } else if (pathname.includes("/FAQ") && menubarMobileOpen) {
         let offsetX = faqRef.current.offsetLeft;
         let width = faqRef.current.offsetWidth;
@@ -114,6 +129,13 @@ function Menubar(props) {
       let circlePosition = width / 2 + offsetX - 4.5;
       setCirclePosition(circlePosition);
       setCurrentSection("пошив");
+    } else if (linkName == "/о_нас") {
+      let offsetX = aboutRef.current.offsetLeft;
+      let width = aboutRef.current.offsetWidth;
+
+      let circlePosition = width / 2 + offsetX - 4.5;
+      setCirclePosition(circlePosition);
+      setCurrentSection("о нас");
     } else if (linkName == "/FAQ") {
       let offsetX = faqRef.current.offsetLeft;
       let width = faqRef.current.offsetWidth;
@@ -161,6 +183,14 @@ function Menubar(props) {
             Пошив
           </Link>
           <Link
+            to="/о_нас"
+            className={currentSection == "о нас" ? "current" : ""}
+            ref={aboutRef}
+            onClick={props.handlePathnameChange}
+          >
+            О&nbsp;нас
+          </Link>
+          <Link
             to="/FAQ"
             className={currentSection == "FAQ" ? "current" : ""}
             ref={faqRef}
@@ -185,6 +215,14 @@ function Menubar(props) {
             className="vk"
           >
             vk
+          </a>
+          <a
+            href="https://wa.me/message/IZUNY4DNFIYFK1"
+            rel="noreferrer"
+            target="_blank"
+            className="wa"
+          >
+            wa
           </a>
           <a
             href="https://www.instagram.com/delai.market/"
@@ -264,6 +302,14 @@ function Menubar(props) {
                     Пошив
                   </Link>
                   <Link
+                    to="/о_нас"
+                    className={currentSection === "о нас" ? "current" : ""}
+                    ref={aboutRef}
+                    onClick={handleMobileLinkClick}
+                  >
+                    О&nbsp;нас
+                  </Link>
+                  <Link
                     to="/FAQ"
                     className={currentSection === "FAQ" ? "current" : ""}
                     ref={faqRef}
@@ -292,6 +338,14 @@ function Menubar(props) {
                     // style={{ marginTop: "15px" }}
                   >
                     vk
+                  </a>
+                  <a
+                    href="https://wa.me/message/IZUNY4DNFIYFK1"
+                    rel="noreferrer"
+                    target="_blank"
+                    className="wa"
+                  >
+                    wa
                   </a>
                   <a
                     href="https://www.instagram.com/delai.market/"
