@@ -28,9 +28,7 @@ export default function CustomPage(props) {
       </h2>
 
       <div
-        className={
-          props.overload.overload == true ? "banner overload" : "banner"
-        }
+        className="banner"
       >
         {window.screen.width < 768 ? <div className="illustration" /> : ""}
 
