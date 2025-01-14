@@ -5,7 +5,7 @@ export default function Footer(props) {
   return (
     <div className="footer">
       <div>
-        <p>Делай Вещи © 2023</p>
+        <p>Делай Вещи © 2025</p>
         <a href="mailto: hello@delai.market" target="_blank">
           hello@delai.market
         </a>
